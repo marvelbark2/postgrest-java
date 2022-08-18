@@ -1,7 +1,9 @@
-package io.supabase.utils;
+package ws.prospeak.postgrest.utils;
 
-import java.io.UnsupportedEncodingException;
-import java.net.*;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
 import java.util.Map;

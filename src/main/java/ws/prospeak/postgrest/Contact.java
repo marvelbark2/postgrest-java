@@ -1,4 +1,4 @@
-package io.supabase;
+package ws.prospeak.postgrest;
 
 public class Contact {
     private Long id;

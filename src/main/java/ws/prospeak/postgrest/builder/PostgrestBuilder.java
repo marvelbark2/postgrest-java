@@ -1,20 +1,17 @@
-package io.supabase.builder;
+package ws.prospeak.postgrest.builder;
 
 import com.google.gson.Gson;
-import io.supabase.utils.HttpMethod;
+import ws.prospeak.postgrest.utils.HttpMethod;
+import ws.prospeak.postgrest.utils.URLUtils;
 
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.HashMap;
 import java.util.Map;
-
-import static io.supabase.utils.URLUtils.appendUri;
-import static io.supabase.utils.URLUtils.urlEncodeUTF8;
 
 public class PostgrestBuilder {
     private final static Gson GSON = new Gson();
@@ -26,7 +23,7 @@ public class PostgrestBuilder {
 
     protected static String body;
 
-    private static Map<String, String> queryParams = new HashMap<>();
+    private static final Map<String, String> queryParams = new HashMap<>();
 
 
     protected void setHttpMethod(HttpMethod method) {
@@ -86,10 +83,10 @@ public class PostgrestBuilder {
     }
 
     private void bootstrapURI() {
-        String queries = urlEncodeUTF8(queryParams);
+        String queries = URLUtils.urlEncodeUTF8(queryParams);
         System.out.println("Queries, " + queries + " / " + queryParams);
         try {
-             this.url = appendUri(this.url, queries);
+             this.url = URLUtils.appendUri(this.url, queries);
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }

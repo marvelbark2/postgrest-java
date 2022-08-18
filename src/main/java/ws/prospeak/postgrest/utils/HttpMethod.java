@@ -1,4 +1,4 @@
-package io.supabase.utils;
+package ws.prospeak.postgrest.utils;
 
 /*
 * const METHOD_GET = 'GET';
@@ -14,6 +14,6 @@ public enum HttpMethod {
     PUT,
     HEAD,
     PATCH,
-    DELETE;
+    DELETE
 
 }

@@ -1,6 +1,4 @@
-package io.supabase.builder;
-
-import java.util.Map;
+package ws.prospeak.postgrest.builder;
 
 public class PostgrestFilterBuilder extends PostgrestBuilder {
     private final PostgrestQueryBuilder postgrestQueryBuilder;

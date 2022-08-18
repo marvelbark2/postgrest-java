@@ -1,7 +1,7 @@
-package io.supabase;
+package ws.prospeak.postgrest;
 
-import io.supabase.builder.PostgrestFilterBuilder;
-import io.supabase.builder.PostgrestQueryBuilder;
+import ws.prospeak.postgrest.builder.PostgrestFilterBuilder;
+import ws.prospeak.postgrest.builder.PostgrestQueryBuilder;
 
 import java.util.Map;
 

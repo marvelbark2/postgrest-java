@@ -1,10 +1,8 @@
-package io.supabase.builder;
+package ws.prospeak.postgrest.builder;
 
 import com.google.gson.Gson;
-import io.supabase.builder.PostgrestFilterBuilder;
-import io.supabase.utils.HttpMethod;
+import ws.prospeak.postgrest.utils.HttpMethod;
 
-import java.net.http.HttpRequest;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
